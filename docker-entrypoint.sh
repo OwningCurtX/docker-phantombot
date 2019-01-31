@@ -12,6 +12,7 @@ if [ "$1" = 'phantombot' ]; then
         && sed -i "s/\%BOT_USERNAME\%/${BOT_USERNAME}/g;
                 s/\%BOT_OAUTH\%/${BOT_OAUTH}/g;
                 s/\%BOT_CHANNEL\%/${BOT_CHANNEL}/g;
+                s/\%BASEPORT\%/${BASEPORT}/g;
                 s/\%BOT_OWNER\%/${BOT_OWNER}/g;" \
                 "/docker/PhantomBot-${PB_VERSION}/botlogin.txt" \
         && chmod +x "/docker/PhantomBot-${PB_VERSION}/launch-service.sh"
